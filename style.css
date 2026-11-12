@@ -1,89 +1,29 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap");
+
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  line-height: 1.6;
-  color: #222;
-  background: #fafafa;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 40px;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
 }
 
-nav ul {
-  display: flex;
-  gap: 24px;
-  list-style: none;
+/* 2. Animasi muncul — keyframes adalah bahasa CSS asli */
+@keyframes muncul {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-nav a {
-  text-decoration: none;
-  color: #222;
-}
-section {
-  padding: 64px 0;
+.animasi-muncul {
+  animation: muncul 0.6s ease-out both;
 }
 
-#tentang { background: #ffffff; }
-#fitur   { background: #eef2ff; }
-
-.isi {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 24px;
+/* 3. Efek angkat untuk kartu — nanti dipakai BERSAMA kelas Tailwind */
+.efek-angkat {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.kartu-container {
-  display: flex;
-  gap: 24px;
-  margin-top: 24px;
+.efek-angkat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(15, 34, 55, 0.12);
 }
 
-.kartu {
-  flex: 1;
-  padding: 24px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-}
-footer {
-  display: flex;
-  gap: 24px;
-  padding: 40px;
-  background: #1f2430;
-  color: #fff;
-}
-
-.footer-logo, .footer-deskripsi, .footer-info {
-  flex: 1;
-}
-
-.footer-deskripsi { text-align: center; }
-.footer-info { text-align: right; }
-nav a:hover {
-  color: #4a7cff;
-}
-
-@media (max-width: 600px) {
-  .kartu-container, footer {
-    flex-direction: column;
-  }
-  .footer-deskripsi, .footer-info { text-align: left; }
-}
-.logo, .footer-logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #1f2430;
-}
-.footer-logo { color: #0fd0de; }
-
-html {
-  scroll-behavior: smooth;
+/* 4. Warna seleksi teks — sentuhan kecil khas CSS */
+::selection {
+  background: #c7d2fe;
 }
