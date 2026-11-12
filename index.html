@@ -8,12 +8,42 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 text-slate-800">
+  <header class="flex items-center justify-between px-8 py-4 bg-white border-b shadow-sm">
+    <a href="#beranda" class="text-2xl font-bold no-underline text-slate-800">TugasKu<span class="text-cyan-400">.</span></a>
+    <nav>
+      <ul class="flex gap-6 list-none">
+        <li><a href="#beranda" class="no-underline text-slate-600 hover:text-indigo-600">Beranda</a></li>
+        <li><a href="#deadline" class="no-underline text-slate-600 hover:text-indigo-600">Deadline</a></li>
+        <li><a href="#tips" class="no-underline text-slate-600 hover:text-indigo-600">Tips</a></li>
+        <li><a href="#kontak" class="no-underline text-slate-600 hover:text-indigo-600">Kontak</a></li>
+      </ul>
+    </nav>
+  </header></header>
   
   <main>
 
-    <section id="beranda" class="p-8 animasi-muncul">
+  <section id="beranda" class="p-8 animasi-muncul">
       <h1 class="text-4xl font-bold text-indigo-600">Semua tugas, satu pandangan.</h1>
-      <p class="mt-2 text-slate-500">kalau kalimat ini tampil di atas latar abu terang, tailwind hidup</p>
+      <p class="mt-2 text-slate-500">tabel pemantau tugas dan deadline empat mata kuliah — biar tidak ada lagi yang diingat 2 jam sebelum dikumpulkan.</p>
+
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="rounded-xl bg-white border p-5 efek-angkat">
+          <p class="text-sm text-slate-500">Total tugas</p>
+          <p class="text-3xl font-bold text-slate-800">8</p>
+        </div>
+        <div class="rounded-xl bg-white border p-5 efek-angkat">
+          <p class="text-sm text-slate-500">Selesai</p>
+          <p class="text-3xl font-bold text-emerald-600">3</p>
+        </div>
+        <div class="rounded-xl bg-white border p-5 efek-angkat">
+          <p class="text-sm text-slate-500">Berjalan</p>
+          <p class="text-3xl font-bold text-amber-500">4</p>
+        </div>
+        <div class="rounded-xl bg-white border p-5 efek-angkat">
+          <p class="text-sm text-slate-500">Terlewat</p>
+          <p class="text-3xl font-bold text-rose-600">1</p>
+        </div>
+      </div>
     </section>
   
     <section id="deadline"></section>
