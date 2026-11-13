@@ -27,3 +27,7 @@ body {
 ::selection {
   background: #c7d2fe;
 }
+
+html {
+  scroll-behavior: smooth;
+}
