@@ -1,3 +1,6 @@
+import tugas from "./data/tugas.js";
+import KartuTugas from "./components/KartuTugas.jsx";
+
 export default function App() {
   return (
     <>
@@ -47,53 +50,9 @@ export default function App() {
 
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-        <article className="rounded-xl bg-white border p-5 efek-angkat">
-          <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">Berjalan</span>
-          <h3 className="mt-3 font-bold text-slate-800">Implementasi CSS & Tailwind</h3>
-          <p className="mt-1 text-sm text-slate-500">Web Application Development · deadline 17 Nov</p>
-        </article>
-
-        <article className="rounded-xl bg-white border p-5 efek-angkat">
-          <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">Berjalan</span>
-          <h3 className="mt-3 font-bold text-slate-800">Search your personality</h3>
-          <p className="mt-1 text-sm text-slate-500">Career Development Center · deadline 15 Nov</p>
-        </article>
-
-        <article className="rounded-xl bg-white border p-5 efek-angkat">
-          <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">Berjalan</span>
-          <h3 className="mt-3 font-bold text-slate-800">Entity Relationship Diagram (ERD)</h3>
-          <p className="mt-1 text-sm text-slate-500">Database · deadline 19 Nov</p>
-        </article>
-
-        <article className="rounded-xl bg-white border p-5 efek-angkat">
-          <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">Berjalan</span>
-          <h3 className="mt-3 font-bold text-slate-800">Implementasi AI dalam Aplikasi Web</h3>
-          <p className="mt-1 text-sm text-slate-500">Artificial Intelligence · deadline 26 Nov</p>
-        </article>
-
-        <article className="rounded-xl bg-white border p-5 efek-angkat">
-          <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">Selesai</span>
-          <h3 className="mt-3 font-bold text-slate-800">Minute of Meeting 1 & 2</h3>
-          <p className="mt-1 text-sm text-slate-500">Software Development Lifecycle · deadline 20 Okt</p>
-        </article>
-
-        <article className="rounded-xl bg-white border p-5 efek-angkat">
-          <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">Selesai</span>
-          <h3 className="mt-3 font-bold text-slate-800">10 Common Case & 5 Edge Case</h3>
-          <p className="mt-1 text-sm text-slate-500">Software Development Fundamentals · deadline 26 Okt</p>
-        </article>
-
-        <article className="rounded-xl bg-white border p-5 efek-angkat">
-          <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">Selesai</span>
-          <h3 className="mt-3 font-bold text-slate-800">Wayfinding system Landmark Sudirman</h3>
-          <p className="mt-1 text-sm text-slate-500">Web Client Development · deadline 20 Okt</p>
-        </article>
-
-        <article className="rounded-xl bg-white border p-5 efek-angkat">
-          <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold text-rose-700">Terlewat</span>
-          <h3 className="mt-3 font-bold text-slate-800">Latihan nested loop</h3>
-          <p className="mt-1 text-sm text-slate-500">ProgFund (Python) · deadline 14 Okt</p>
-        </article>
+    {tugas.map((t) => (
+          <KartuTugas key={t.id} tugas={t} />
+        ))}
 
       </div>
     </section>
