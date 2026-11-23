@@ -1,0 +1,7 @@
+{
+  "tugas": [
+    { "id": 1, "judul": "Implementasi CSS & Tailwind", "matkul": "WAD", "status": "berjalan" },
+    { "id": 2, "judul": "ERD Database", "matkul": "Database", "status": "berjalan" },
+    { "id": 3, "judul": "Latihan nested loop", "matkul": "ProgFund", "status": "terlewat" }
+  ]
+}

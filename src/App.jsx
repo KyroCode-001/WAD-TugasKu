@@ -1,6 +1,7 @@
 import Counter from "./components/Counter.jsx"
 import tugas from "./data/tugas.js";
 import ToDoList from "./components/ToDoList.jsx";
+import FetchTugas from "./components/FetchTugas.jsx";
 import KartuTugas from "./components/KartuTugas.jsx";
 
 
@@ -52,7 +53,9 @@ export default function App() {
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
         <ToDoList />
-        
+
+        <FetchTugas />
+
     {tugas.map((t) => (
           <KartuTugas key={t.id} tugas={t} />
         ))}
