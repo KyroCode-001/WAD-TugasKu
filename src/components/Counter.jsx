@@ -15,7 +15,8 @@ export default function Counter() {
           + Tambah
         </button>
         <button
-          onClick={() => setHitungan(hitungan - 1)}
+          onClick={() => setHitungan(Math.max(0, hitungan - 1))}
+          disabled={hitungan === 0}
           className="rounded-lg bg-slate-200 text-slate-700 px-4 py-1 text-sm hover:bg-slate-300"
         >
           − Kurangi
