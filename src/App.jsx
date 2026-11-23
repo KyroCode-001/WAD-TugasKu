@@ -1,5 +1,7 @@
+import Counter from "./components/Counter.jsx"
 import tugas from "./data/tugas.js";
 import KartuTugas from "./components/KartuTugas.jsx";
+
 
 export default function App() {
   return (
@@ -25,10 +27,8 @@ export default function App() {
         — biar tidak ada lagi yang diingat 2 jam sebelum dikumpulkan.</p>
 
       <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="rounded-xl bg-white border p-5 efek-angkat">
-          <p className="text-sm text-slate-500">Total tugas</p>
-          <p className="text-3xl font-bold text-slate-800">8</p>
-        </div>
+        <Counter />
+        
         <div className="rounded-xl bg-white border p-5 efek-angkat">
           <p className="text-sm text-slate-500">Selesai</p>
           <p className="text-3xl font-bold text-emerald-600">3</p>
