@@ -1,5 +1,6 @@
 import Counter from "./components/Counter.jsx"
 import tugas from "./data/tugas.js";
+import ToDoList from "./components/ToDoList.jsx";
 import KartuTugas from "./components/KartuTugas.jsx";
 
 
@@ -28,7 +29,7 @@ export default function App() {
 
       <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
         <Counter />
-        
+
         <div className="rounded-xl bg-white border p-5 efek-angkat">
           <p className="text-sm text-slate-500">Selesai</p>
           <p className="text-3xl font-bold text-emerald-600">3</p>
@@ -50,6 +51,8 @@ export default function App() {
 
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
+        <ToDoList />
+        
     {tugas.map((t) => (
           <KartuTugas key={t.id} tugas={t} />
         ))}
