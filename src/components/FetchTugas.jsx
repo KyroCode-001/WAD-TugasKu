@@ -6,7 +6,7 @@ export default function FetchTugas() {
 
   useEffect(() => {
     let ignore = false;
-    setData(null);
+
 
     fetch("/tugas-dummy.json")
       .then(res => {
@@ -28,7 +28,7 @@ export default function FetchTugas() {
 
   return (
     <div className="rounded-xl bg-white border p-5 efek-angkat">
-      <h3 className="font-bold text-slate-800 mb-3">Data Tugas (fetched via useEffect)</h3>
+      <h3 className="font-bold text-slate-800 mb-3">Data Tugas</h3>
       <ul className="space-y-2">
         {data.map(t => (
           <li key={t.id} className="text-sm">
